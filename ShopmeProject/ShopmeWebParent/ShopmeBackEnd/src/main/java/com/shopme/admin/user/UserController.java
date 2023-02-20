@@ -62,17 +62,19 @@ public class UserController {
 		try {
 			User user = service.get(id);
 			List<Role> listRoles = service.listRoles();
-			
+
 			model.addAttribute(user);
 			model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
 			model.addAttribute("listRoles", listRoles);
-			
+
 			return "user_form";
-		} catch (Exception ex) {
+		} catch (UserNotFoundException ex) {
 			redirectAttributes.addFlashAttribute("message", ex.getMessage());
-			
+
 			return "redirect:/users";
 		}
+
+	}
 
 	@GetMapping("/users/delete/{id}")
 	public String deleteUser(@PathVariable(name = "id") Integer id, RedirectAttributes redirectAttributes,
@@ -81,7 +83,7 @@ public class UserController {
 			service.delete(id);
 			redirectAttributes.addFlashAttribute("message", "The user ID " + id + " has been deleted successfully.");
 
-		} catch (Exception ex) {
+		} catch (UserNotFoundException ex) {
 			redirectAttributes.addFlashAttribute("message", ex.getMessage());
 
 		}
