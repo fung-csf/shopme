@@ -122,5 +122,21 @@ public class UserRepositoryTests {
 		assertThat(user).isNotNull();
 	}
 	
+	/*
+	 * count the number of records in database with a particular id.
+	 * return value should be 1,
+	 * because id is unique.
+	 * 
+	 * use countById() method to test whether a user exists. 
+	 */
+	@Test
+	public void testCountById() {
+		
+		Integer userId = 1;
+		Long countById = repo.countById(userId);
+		
+		assertThat(countById).isNotNull().isGreaterThan(0).isEqualTo(1);
+	}
+	
 
 }

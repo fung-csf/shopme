@@ -23,4 +23,8 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 	 */
 	@Query("SELECT u FROM User u WHERE u.email = :email")
 	public User getUserByEmail(@Param("email") String email);
+	
+	// countById() declaration follows the JPA specification
+	//to check the existence of a user
+	public Long countById(Integer id);
 }

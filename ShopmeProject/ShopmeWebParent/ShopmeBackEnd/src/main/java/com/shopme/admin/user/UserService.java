@@ -39,14 +39,16 @@ public class UserService {
 		if (isUpdatingUser) {
 
 			User existingUser = userRepo.findById(user.getId()).get();
-			
-			if(user.getPassword().isEmpty()) {
+
+			if (user.getPassword().isEmpty()) {
 				/*
-				 * if we do not set the user password to existing user password, 
-				 * password field will be an empty string. When the
-				 * user object is saved to database.
+				 * if we do not set the user password to existing user password, password field
+				 * will be an empty string. When the user object is saved to database, the empty
+				 * string will replace the encoded password.
 				 */
 				user.setPassword(existingUser.getPassword());
+			} else {
+				encodePassword(user);
 			}
 
 		} else {
@@ -89,4 +91,16 @@ public class UserService {
 			throw new UserNotFoundException("could not find any user with id: " + id);
 		}
 	}
+
+	public void delete(Integer id) throws UserNotFoundException {
+
+		Long countById = userRepo.countById(id);
+
+		if (countById == null || countById == 0) {
+			throw new UserNotFoundException("could not find any user with id: " + id);
+		}
+		
+		userRepo.deleteById(id);
+	}
+
 }
