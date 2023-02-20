@@ -11,6 +11,7 @@ public class UserRestController {
 	@Autowired
 	private UserService service;
 
+	/* can find the params from the jquery checkEmailUnique function in user_form.html */	
 	@PostMapping("/users/check_email")
 	public String checkDuplicateEmail(@Param("email") String email) {
 

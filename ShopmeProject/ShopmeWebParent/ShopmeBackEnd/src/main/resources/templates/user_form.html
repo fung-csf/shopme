@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>Create New Users</title>
+<title>[[${pageTitle}]]</title>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
 <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
@@ -56,11 +56,12 @@
 		</div>
 
 			<div>
-				<h2>Manage Users | Create New Users</h2>
+				<h2>Manage Users | [[${pageTitle}]]</h2>
 			<div />
 
 			<form th:action="@{/users/save}" method="post" style="max-width:700px; margin: 0 auto"
 			th:object="${user}" onsubmit="return checkEmailUnique(this);">
+			<input type="hidden" th:field="*{id}" />
 			<div class="border border-secondary rounded p-3">
 				<div class="form-group row">
 					<label class="col-sm-4 col-form-label">E-mail:</label>
@@ -86,7 +87,11 @@
 				<div class="form-group row">
 					<label class="col-sm-4 col-form-label">Password:</label>
 					<div class="col-sm-8">
-						<input type="password" class="form-control" th:field="*{password}" required minlength="8" maxlength="20" />
+					
+						<input th:if="${user.id == null}" type="password" class="form-control" th:field="*{password}" required minlength="8" maxlength="20" />
+						
+						<input th:if="${user.id != null}" type="password" class="form-control" th:field="*{password}" minlength="8" maxlength="20" />
+						
 					</div>
 				</div>
 				
@@ -161,16 +166,18 @@
 		
 		url = "[[@{/users/check_email}]]";
 		userEmail = $("#email").val();
+		userId = $("#id").val();
 		csrfValue = $("input[name='_csrf']").val();
-		params = {email: userEmail, _csrf: csrfValue};
+		params = {id: userId, email: userEmail, _csrf: csrfValue};
 		
 		
 		$.post(url, params, function(response){
 			
 			if(response == "OK") {
+				//submit the form when email is unique
 				form.submit();
 			} else if (response == "Duplicated") {
-				showModalDialog("Warning", "there is another user with the email"+ userEmail );
+				showModalDialog("Warning", "there is another user with the email "+ userEmail);
 			}else {
 				showModalDialog("Error", "unkown response from server");
 			}
@@ -179,6 +186,7 @@
 			showModalDialog("Error", "could not connect to server");
 		});
 		
+		/* onsubmit = "return false", (stops the submission of form) */
 		return false;
 	}
 	
