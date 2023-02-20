@@ -1,0 +1,4 @@
+server.port=8080
+server.servlet.context-path="/ShopmeAdmin"
+
+set spring.thymeleaf.check-template-location=false
