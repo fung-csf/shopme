@@ -164,18 +164,19 @@
 		csrfValue = $("input[name='_csrf']").val();
 		params = {email: userEmail, _csrf: csrfValue};
 		
-		$("#modalDialog").modal();
-		
-		if(true) return false;
 		
 		$.post(url, params, function(response){
 			
 			if(response == "OK") {
 				form.submit();
 			} else if (response == "Duplicated") {
-				alert("there is another user with the email " + userEmail);
+				showModalDialog("Warning", "there is another user with the email"+ userEmail );
+			}else {
+				showModalDialog("Error", "unkown response from server");
 			}
 			
+		}).fail(function(){
+			showModalDialog("Error", "could not connect to server");
 		});
 		
 		return false;
@@ -183,7 +184,9 @@
 	
 	
 	function showModalDialog(title, message) {
-		
+		$("#modalTitle").val(title);
+		$("#modalBody").val(message);
+		$("#modalDialog").modal();
 	}
 	
 	
