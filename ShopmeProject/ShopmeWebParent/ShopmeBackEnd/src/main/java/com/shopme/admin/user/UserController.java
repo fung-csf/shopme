@@ -55,17 +55,23 @@ public class UserController {
 	public String saveUser(@ModelAttribute("user") User user, RedirectAttributes redirectAttributes,
 			@RequestParam("image") MultipartFile multipartFile) throws IOException {
 
-		System.out.println(user);
-		System.out.println(multipartFile.getOriginalFilename());
-		String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
 		
-		String uploadDir = "user-photos";
+		if(!multipartFile.isEmpty()) {
+			
+			String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+			user.setPhotos(fileName);
+			
+			User savedUser = service.save(user);
+			
+			String uploadDir = "user-photos/" + savedUser.getId();
+			
+			FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+		}
 		
-		FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
 		
 //		service.save(user);
 
-//		redirectAttributes.addFlashAttribute("message", "the user has been saved successfully");
+		redirectAttributes.addFlashAttribute("message", "the user has been saved successfully");
 
 		// POST/REDIRECT/GET web design
 		return "redirect:/users";

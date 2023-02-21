@@ -1,0 +1,7 @@
+package com.shopme.admin;
+
+import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
+
+public class MvcConfig implements WebSecurityConfigurer<T> {
+
+}
