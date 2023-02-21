@@ -79,6 +79,7 @@ public class Role {
 		if (getClass() != obj.getClass())
 			return false;
 		Role other = (Role) obj;
+		// check whether the role object id's are equal
 		return Objects.equals(id, other.id);
 	}
 

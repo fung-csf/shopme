@@ -99,6 +99,8 @@ public class UserRepositoryTests {
 		
 		/* take note of overriding/implementing the hashcode and equals method in roles
 		 * class. need to override those two methods for remove() to work.
+		 *  The remove() method removes an element "e" such that Objects.equals(o, e),
+		 *  this will invoke the overwritten equals() method in Role Class. 
 		 * */
 		userRavi.getRoles().remove(roleEditor);
 		userRavi.addRoles(roleSalesperson);
@@ -138,5 +140,19 @@ public class UserRepositoryTests {
 		assertThat(countById).isNotNull().isGreaterThan(0).isEqualTo(1);
 	}
 	
+	@Test	
+	public void testDisableUser() {
+		Integer userId = 1;
+		
+		repo.updateEnabledStatus(userId, false);
+	}
 
+	@Test	
+	public void testEnableUser() {
+		Integer userId = 1;
+		
+		repo.updateEnabledStatus(userId, true);
+	}
+	
 }
+

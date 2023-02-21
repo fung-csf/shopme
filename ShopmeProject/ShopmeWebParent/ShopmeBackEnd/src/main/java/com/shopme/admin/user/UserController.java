@@ -63,7 +63,7 @@ public class UserController {
 			User user = service.get(id);
 			List<Role> listRoles = service.listRoles();
 
-			model.addAttribute(user);
+			model.addAttribute("user", user);
 			model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
 			model.addAttribute("listRoles", listRoles);
 

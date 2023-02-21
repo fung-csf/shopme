@@ -91,7 +91,7 @@
 							
 							<td>
 								<a th:if="${user.enabled == true}" class="fas fa-check-circle fa-2x icon-green" href=""></a>
-								<a th:if="${user.enabled == false}" class="fas fa-check-circle fa-2x icon-silver" href=""></a>
+								<a th:if="${user.enabled == false}" class="fas fa-circle fa-2x icon-silver" href=""></a>
 							</td>
 							<td>
 									<a class="fas fa-edit fa-2x icon-green" th:href="@{'/users/edit/' + ${user.id}}"
