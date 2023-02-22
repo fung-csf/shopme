@@ -59,7 +59,7 @@
 		<div>
 			<h2>Manage Users</h2>
 			<a th:href="@{/users/new}">Create New User</a>
-		<div />
+		</div>
 		
 		<!-- only display success message when a new user is created -->
 		<div th:if="${message != null}" class="alert alert-success text-center">
@@ -73,7 +73,22 @@
 							<th>User Id</th>
 							<th>Photos</th>
 							<th>Email</th>
-							<th>First Name</th>
+							
+							<th>
+								<a th:if="${sortField != 'firstName'}"
+								   th:href="@{'/users/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${sortDir}}">
+									First Name
+								</a>
+								
+								<a th:if="${sortField == 'firstName'}"
+								   th:href="@{'/users/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+									First Name
+								</a>
+								
+								<span th:if="${sortField == 'firstName'}"
+								th:class="${sortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+							</th>
+							
 							<th>Last Name</th>
 							<th>Roles</th>
 							<th>Enabled</th>
@@ -115,6 +130,48 @@
 			</div>
 			
 			
+			<!-- IF -->
+			<div class="text-center m-1" th:if="${totalItems > 0}">
+				<span>Showing Users # [[${startCount}]] to [[${endCount}]] of [[${totalItems}]]</span>
+			</div>
+			
+			<!-- ELSE -->
+			<div class="text-center m-1" th:unless="${totalItems > 0}">
+				<span>No users found</span>
+			</div>
+			
+			
+			<div>
+				<nav>
+					  <ul class="pagination justify-content-center">
+					  
+					  	<li th:class=" ${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+					    	<a class="page-link" th:href="@{/users/page/1}">First</a>
+				    	</li>
+					  
+					    <li th:class=" ${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+					    	<a class="page-link" th:href="@{'/users/page/' + ${currentPage - 1}}">Previous</a>
+				    	</li>
+					    	
+					    <!-- org.thymeleaf.expression.Numbers class, An object of this class is usually available in variable evaluation expressions with the name #numbers. -->
+					    <li th:class="${currentPage != i ? 'page-item' : 'page-item active'}" 
+					    	th:each="i : ${#numbers.sequence(1, totalPages)}">
+					    	<a class="page-link" th:href="@{'/users/page/' + ${i}}">[[${i}]]</a>
+					    </li>
+					    
+					    <li  th:class=" ${currentPage < totalPages ? 'page-item' : 'page-item disabled'}">
+					    	<a class="page-link" th:href="@{'/users/page/' + ${currentPage + 1}}">Next</a>
+					    </li>
+					    
+					    <li th:class=" ${currentPage < totalPages ? 'page-item' : 'page-item disabled'}">
+					    	<a class="page-link" th:href="@{'/users/page/' + ${totalPages}}">Last</a>
+					    </li>
+					  </ul>
+				</nav>
+			</div>
+			
+			
+			
 			<div class="modal fade text-center" id="confirmModal">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -139,7 +196,7 @@
 			
 			<div class="text-center">
 				<p>Shopme Control Panel - Copyright &copy; Shopme</p>
-			<div />
+			</div>
 
 
 	</div>

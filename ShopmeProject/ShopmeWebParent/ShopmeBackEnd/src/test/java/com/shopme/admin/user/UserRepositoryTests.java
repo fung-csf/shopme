@@ -2,6 +2,9 @@ package com.shopme.admin.user;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
+
+import org.hibernate.internal.build.AllowSysOut;
 import org.hibernate.query.sqm.mutation.internal.TableKeyExpressionCollector;
 import org.junit.jupiter.api.Test;
 import org.springframework.aot.nativex.NativeConfigurationWriter;
@@ -10,12 +13,15 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.annotation.Rollback;
 
 import com.shopme.common.entity.Role;
 import com.shopme.common.entity.User;
 
-@DataJpaTest
+@DataJpaTest(showSql = false)
 //configure to run on real database(MySQL) instead of a test database
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 /*
@@ -153,6 +159,22 @@ public class UserRepositoryTests {
 		
 		repo.updateEnabledStatus(userId, true);
 	}
+	
+	@Test
+	public void testListFirstPage() {
+		int pageNumber = 0; // the first page number always start with 0, change pageNumber to 1 to get the second page, 2 for thid page and so forth
+		int pageSize = 4; // no of elements
+		
+		Pageable pageable = PageRequest.of(pageNumber, pageSize);
+		Page<User> page = repo.findAll(pageable);
+		
+		List<User> listUsers = page.getContent();
+		
+		listUsers.forEach(System.out::println);
+		
+		assertThat(listUsers.size()).isEqualTo(pageSize);
+	}
+	
 	
 }
 
