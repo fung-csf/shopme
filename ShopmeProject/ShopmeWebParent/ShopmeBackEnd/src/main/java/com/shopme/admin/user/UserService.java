@@ -37,7 +37,7 @@ public class UserService {
 	}
 	
 	
-	public Page<User> listByPage(int pageNum, String sortField, String sortDir) {
+	public Page<User> listByPage(int pageNum, String sortField, String sortDir, String keyword) {
 		
 		Sort sort = Sort.by(sortField);
 		
@@ -45,6 +45,11 @@ public class UserService {
 		
 		//page number start with 0 for pageable, so need to minus 1.
 		Pageable pageable = PageRequest.of(pageNum - 1, USERS_PER_PAGE, sort);
+		
+		//keyword for filtering users
+		if(keyword != null) {
+			return userRepo.findAll(keyword, pageable);
+		}
 		
 		return userRepo.findAll(pageable);
 	}

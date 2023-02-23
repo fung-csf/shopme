@@ -176,5 +176,26 @@ public class UserRepositoryTests {
 	}
 	
 	
+	@Test 
+	public void testSearchUsers() {
+		
+		String keyword = "bruce";
+		
+		
+		int pageNumber = 0; // the first page number always start with 0, change pageNumber to 1 to get the second page, 2 for thid page and so forth
+		int pageSize = 4; // no of elements
+		
+		Pageable pageable = PageRequest.of(pageNumber, pageSize);
+		Page<User> page = repo.findAll(keyword, pageable);
+		
+		List<User> listUsers = page.getContent();
+		
+		listUsers.forEach(System.out::println);
+		
+		assertThat(listUsers.size()).isGreaterThan(0);
+		
+	}
+	
+	
 }
 
