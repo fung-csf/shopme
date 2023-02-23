@@ -133,7 +133,7 @@ public class User {
 	}
 
 	// Transient annotation to indicate this getter method is not mapped to any
-	// field in databse
+	// field in database
 	@Transient
 	public String getPhotosImagePath() {
 
@@ -141,6 +141,14 @@ public class User {
 		
 		return "/user-photos/" + this.id + "/" + this.photos;
 
+	}
+	
+	// Transient annotation to indicate this getter method is not mapped to any
+	// field in database
+	@Transient
+	public String getFullName() {
+		
+		return firstName + " " + lastName;
 	}
 
 }

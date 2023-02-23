@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+		<!-- purpose: make code more succinct and readable 
+		project is easier to maintain
+		
+		use thymeleaf fragments -->
+
+
+	<th th:fragment="column_link(fieldName, columnLabel)">
+		<!-- follow the sort order of another sortField; if the other field is sortDir="asc", then the newly selected column will be sortDir="asc" too -->
+		<a class="text-white"
+		   th:href="@{'/users/page/' + ${currentPage} + '?sortField=' + ${fieldName} + '&sortDir=' + ${sortField != fieldName ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">
+			[[${columnLabel}]]
+		</a>
+		
+		<span th:if="${sortField == fieldName}"
+		th:class="${sortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+	</th>
+	
+	
+	<a th:fragment="page_link(pageNum, label)"
+	   class="page-link"
+		></a>
+	
+	
+	
+</body>
+</html>
