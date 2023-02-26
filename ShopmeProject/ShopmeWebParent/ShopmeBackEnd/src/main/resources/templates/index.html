@@ -11,7 +11,12 @@
 		<div th:replace="navigation :: menu"></div>
 
 		<div>
-			<h1>Shopme Control Panel</h1>
+			<h2>Shopme Control Panel</h2>
+			Welcome
+			<!-- principal refers to logged-in user; display username and role -->
+			<a  sec:authentication="principal.fullname" 
+			th:href="@{/account}"></a>
+			<span sec:authentication="principal.authorities"></span>
 		</div>
 
 		<!-- footer -->
