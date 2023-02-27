@@ -8,9 +8,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import org.hibernate.internal.build.AllowSysOut;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileUploadUtil {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(FileUploadUtil.class);
+	
 	
 	public static void saveFile(String uploadDir, String fileName,
 			MultipartFile multipartFile) throws IOException {
@@ -40,12 +45,15 @@ public class FileUploadUtil {
 						try {
 							Files.delete(file);
 						} catch(IOException ex) {
-							System.out.println("could not delete file: " + file);
+							LOGGER.error("could not delete file: " + file);
+							
+						 //System.out.println("could not delete file: " + file);
 						}
 					}
 				});
 		}catch (IOException ex) {
-			System.out.println("could not list directory: " + dirPath );
+			LOGGER.error("could not list directory: " + dirPath);
+        // System.out.println("could not list directory: " + dirPath );
 		}
 	}
 }

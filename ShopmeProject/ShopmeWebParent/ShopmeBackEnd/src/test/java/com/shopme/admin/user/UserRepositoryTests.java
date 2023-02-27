@@ -36,8 +36,7 @@ public class UserRepositoryTests {
 	@Autowired
 	private TestEntityManager entityManager;
 
-	// On the very first execution of testCreateUser() method; hibernate will create
-	// the users table & users_roles table
+	
 	@Test
 	public void testCreateUserWithOneRole() {
 
