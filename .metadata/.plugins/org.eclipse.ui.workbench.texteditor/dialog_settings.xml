@@ -6,6 +6,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="/users/"/>
 			<item value="sec"/>
 			<item value="encode"/>
 			<item value="user"/>
@@ -13,7 +14,6 @@
 			<item value="fileImage"/>
 			<item value="email"/>
 			<item value="checkEmailUnique"/>
-			<item value="onSubmit"/>
 		</list>
 		<list key="replacehistory">
 		</list>
