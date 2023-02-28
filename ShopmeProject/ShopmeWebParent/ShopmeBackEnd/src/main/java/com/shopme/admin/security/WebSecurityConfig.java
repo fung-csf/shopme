@@ -73,7 +73,7 @@ public class WebSecurityConfig {
 				.permitAll()
 			.and().logout().permitAll()
 			.and().rememberMe().key("AbcDefgHijKlmnOpqrs_1234567890")
-			.tokenValiditySeconds(7 * 24 * 60 * 60);  // cookie is valid for one week
+			.tokenValiditySeconds(7 * 24 * 60 * 60);  // remember me cookie is valid for one week
 		
 		/*
 		 * set a fix key used for the md5 hash algorithm to encrypt cookie content each

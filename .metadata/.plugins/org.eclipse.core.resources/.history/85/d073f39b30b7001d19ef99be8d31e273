@@ -1,0 +1,54 @@
+package com.shopme.admin.category;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.Rollback;
+
+import com.shopme.common.entity.Category;
+
+/*
+ * Unit Test for CategoryRepository
+ * 
+ * objective:
+ * 1. test the methods in repository 
+ * 2. populate the database with records
+ * 
+*/
+
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+@Rollback(false)
+public class CategoryRepositoryTests {
+	
+	@Autowired
+	private CategoryRepository repo;
+	
+	@Test
+	public void testCreateRootCategory() {
+//		Category category = new Category("Computers");
+		Category category = new Category("Electronics");
+		Category savedCategory = repo.save(category);
+		
+		assertThat(savedCategory.getId()).isGreaterThan(0);
+		
+	}
+	
+	@Test
+	public void testCreateSubCategory() {
+		
+		// ID for root category "Computer" is 1
+		Category parent = new Category(1);
+		
+		Category subCategory = new Category("Desktops", parent);
+		
+		Category savedCategory = repo.save(subCategory);
+		
+	}
+	
+	
+}

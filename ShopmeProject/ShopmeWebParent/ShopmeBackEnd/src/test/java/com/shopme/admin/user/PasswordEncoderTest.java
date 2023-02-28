@@ -5,6 +5,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+
+/*
+ * Unit Test for BCryptPasswordEncoder
+ * 
+ * objective:
+ * 1. To test password encryption with BCryptPasswordEncoder
+ * 
+*/
+
 public class PasswordEncoderTest {
 
 	@Test

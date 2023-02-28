@@ -18,6 +18,18 @@ import org.springframework.test.annotation.Rollback;
 import com.shopme.common.entity.Role;
 import com.shopme.common.entity.User;
 
+/*
+ * Unit Test for UserRepository
+ * 
+ * objective:
+ * 1. test the methods in repository 
+ * 2. populate the database with records
+ * 
+ * 
+*/
+
+
+
 @DataJpaTest(showSql = false)
 //configure to run on real database(MySQL) instead of a test database
 @AutoConfigureTestDatabase(replace = Replace.NONE)
