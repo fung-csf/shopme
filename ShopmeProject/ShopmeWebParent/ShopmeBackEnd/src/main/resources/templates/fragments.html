@@ -46,5 +46,27 @@
 	   th:href= "@{'/users/page/' + ${pageNum} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">[[${label}]]</a>
 	
 	
+	<div th:fragment="category_status">
+	
+		  <!--  <a  href="" class="fas fa-check-circle fa-2x icon-green" 
+				
+				title="Disable this category"></a> -->
+								
+								
+			<a href="" class="fas fa-circle fa-2x icon-silver"
+				
+				title="Enable this category"></a> 
+	</div>	
+	
+	<div th:fragment="category_actions">	
+					
+			<a href="" class="fas fa-edit fa-2x icon-green" 
+					title="edit this category"></a>
+					&nbsp; 
+			<a href="" class="fas fa-trash fa-2x icon-dark link-delete" 
+					title="delete this category"></a>	 		
+	</div>	
+	
+	
 </body>
 </html>
