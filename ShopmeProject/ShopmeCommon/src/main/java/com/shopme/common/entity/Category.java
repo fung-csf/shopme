@@ -41,10 +41,54 @@ public class Category {
 
 	public Category() {
 	}
-	
+
 	public Category(Integer id) {
 		this.id = id;
 	}
+
+	public static Category copyIdAndName(Category category) {
+
+		Category copyCategory = new Category();
+		copyCategory.setName(category.getName());
+		copyCategory.setId(category.getId());
+
+		return copyCategory;
+	}
+
+	public static Category copyIdAndName(Integer id, String name) {
+
+		Category copyCategory = new Category();
+		copyCategory.setName(name);
+		copyCategory.setId(id);
+
+		return copyCategory;
+	}
+
+	/* create a copy of a category object in order to append the -- symbol to denote hierarchy level
+	 * */
+	public static Category copyFull(Category category) {
+
+		Category copyCategory = new Category();
+		copyCategory.setName(category.getName());
+		copyCategory.setId(category.getId());
+		copyCategory.setImage(category.getImage());
+		copyCategory.setAlias(category.getAlias());
+		copyCategory.setEnabled(category.isEnabled());
+
+		return copyCategory;
+	}
+	
+	/* create a copy of a category object in order to append the -- symbol to denote hierarchy level
+	 * */
+	public static Category copyFull(Category category, String name) {
+
+		Category copyCategory = Category.copyFull(category);
+		copyCategory.setName(name);
+
+		return copyCategory;
+	}
+	
+	
 
 	public Category(String name) {
 		this.name = name;

@@ -16,6 +16,11 @@
 			<a th:href="@{/categories/export/csv}" class="fas fa-file-csv fa-2x icon-dark mr-2"></a>
 		</div>
 		
+		<!-- redirect message from controller -->
+		<div th:if="${message != null}" class="alert alert-success text-center">
+			[[${message}]]
+		</div>
+		
 			
 		<div>
 			<form th:action="@{/categories/page/1}" class="form-inline m-3">
