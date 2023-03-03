@@ -55,14 +55,16 @@
 					<tbody>
 						<tr th:each="cat : ${listCategories}">
 							<td>[[${cat.id}]]</td>
-							<td></td>
+							<td>	
+								<img th:src="@{${cat.imagePath}}" style="width: 100px;" class="image-fluid"/>
+							</td>
 							<td>[[${cat.name}]]</td>
 							<td>[[${cat.alias}]]</td>
 							<td>
 								<div th:replace="fragments :: category_status"></div>
 							</td>
 							<td>
-								<div th:replace="fragments :: category_actions"></div>
+								<div th:replace="fragments :: category_actions(${cat.id})"></div>
 							</td>
 						</tr>
 					</tbody>

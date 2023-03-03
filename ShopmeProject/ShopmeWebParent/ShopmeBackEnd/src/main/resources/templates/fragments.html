@@ -58,9 +58,9 @@
 				title="Enable this category"></a> 
 	</div>	
 	
-	<div th:fragment="category_actions">	
+	<div th:fragment="category_actions(id)">	
 					
-			<a href="" class="fas fa-edit fa-2x icon-green" 
+			<a th:href="@{'/categories/edit/' + ${id}}" class="fas fa-edit fa-2x icon-green" 
 					title="edit this category"></a>
 					&nbsp; 
 			<a href="" class="fas fa-trash fa-2x icon-dark link-delete" 

@@ -2,9 +2,11 @@ package com.shopme.admin.category;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.support.Repositories;
 import org.springframework.stereotype.Service;
 
 import com.shopme.common.entity.Category;
@@ -34,7 +36,7 @@ public class CategoryService {
 			for (Category subCategory : children) {
 				String name = "--" + subCategory.getName();
 				hierarchicalCategories.add(Category.copyFull(subCategory, name));
-				
+
 				listHierarchicalCategories(hierarchicalCategories, subCategory, 1);
 			}
 		}
@@ -106,11 +108,22 @@ public class CategoryService {
 			for (int i = 0; i < newSubLevel; i++) {
 				name += "--";
 			}
-
 			name += subCategory.getName();
 			categoriesUsedInForm.add(Category.copyIdAndName(subCategory.getId(), name));
 
 			listSubCategoriesUsedInForm(categoriesUsedInForm, subCategory, newSubLevel);
+		}
+
+	}
+
+	public Category get(Integer id) throws CategoryNotFoundException {
+
+		try {
+			return repo.findById(id).get();
+
+		} catch (NoSuchElementException ex) {
+
+			throw new CategoryNotFoundException("could not find any category with the ID: " + id);
 		}
 
 	}

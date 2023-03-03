@@ -18,22 +18,28 @@ public class MvcConfig implements WebMvcConfigurer {
 	 * the web clients (browsers) - that's the primary purpose
 	 *  of using resource handlers in Spring MVC.
 	 * 
+	 * Because the assets are not located in the src/main/resources/static folder
 	 * */
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
 		String dirName = "user-photos";
-		
 		Path userPhotoDir = Paths.get(dirName);
-		
 		String userPhotosPath = userPhotoDir.toFile().getAbsolutePath();
 		
-		
 		// add /** to allow all files under this directory to be available to client
-		
 		registry.addResourceHandler("/" + dirName + "/**")
 		.addResourceLocations("file:/" + userPhotosPath + "/");
+		
+		
+		String categoryImagesDirName = "../category-images";
+		Path categoryImagesDir = Paths.get(categoryImagesDirName);
+		String categoryImagesPath = categoryImagesDir.toFile().getAbsolutePath();
+		
+		// add /** to allow all files under this directory to be available to client
+		registry.addResourceHandler("/category-images/**")
+		.addResourceLocations("file:/" + categoryImagesPath + "/");
 		
 	}
 	
