@@ -33,3 +33,18 @@ $(document).ready(function() {
 		
 		reader.readAsDataURL(file);
 	}
+	
+	
+	function showModalDialog(title, message) {
+		$("#modalTitle").val(title);
+		$("#modalBody").val(message);
+		$("#modalDialog").modal();
+	}
+	
+	function showErrorModal(message){
+		showModalDialog("Error", message);
+	}
+	
+	function showWarningModal(message){
+		showModalDialog("Warning", message);
+	}

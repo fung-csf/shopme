@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: page_head('Categories - Shopme Admin')"/>
+
+<body>
+	<div class="container-fluid">
+		
+		<!-- navigation bar -->
+		<div th:replace="navigation :: menu"></div>
+
+		<div>
+			<h2>Manage Categories</h2>
+			<a th:href="@{/categories/new}" class="fas fa-folder-plus fa-2x icon-dark mr-2"></a>
+			
+			<a th:href="@{/categories/export/csv}" class="fas fa-file-csv fa-2x icon-dark mr-2"></a>
+		</div>
+		
+		<!-- redirect message from controller -->
+		<div th:if="${message != null}" class="alert alert-success text-center">
+			[[${message}]]
+		</div>
+		
+			
+		<div>
+			<form th:action="@{/categories/page/1}" class="form-inline m-3">
+				
+				Filter:&nbsp;
+				<input type="search" name="keyword" th:value="${keyword}" class="form-control" required/>
+				&nbsp;&nbsp;
+				<button type="submit" class="btn btn-primary">
+					<i class="fas fa-search"></i>
+				</button>
+				&nbsp;&nbsp;
+				<button type="button" class="btn btn-secondary" onclick="clearFilter()">
+					<i class="fas fa-eraser"></i>
+				</button>
+			</form>
+		
+		</div>
+
+			<!-- css class to display this table in large screens only , refer to static/style.css for more info-->
+			<div class="full-details">
+				<table class="table table-bordered table-striped table-hover table-responsive-xL">
+					<thead class="thead-dark">
+						<tr>
+							<th>ID</th>
+							<th>Category Image</th>
+							<th>
+								<a class="text-white" th:href="@{'/categories?sortDir=' + ${reverseSortDir}}">Category Name</a>
+								<span th:class="${reverseSortDir == 'desc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+							</th>
+							<th>Alias</th>
+							<th>Enabled</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="cat : ${listCategories}">
+							<td>[[${cat.id}]]</td>
+							<td>	
+								<img th:src="@{${cat.imagePath}}" style="width: 100px;" class="image-fluid"/>
+							</td>
+							<td>[[${cat.name}]]</td>
+							<td>[[${cat.alias}]]</td>
+							<td>
+								<div th:replace="fragments :: category_status"></div>
+							</td>
+							<td>
+								<div th:replace="fragments :: category_actions"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			<!-- css class to display this <div> on mobile screens only, refer to /static/style.css for more info-->
+			<div class="less-details">
+				
+				<div th:each="user : ${listUsers}" class="row m-1">
+					
+					<div class="col-4">
+						
+						<span th:if="${user.photos == null}" class="fas fa-portrait fa-3x icon-dark"></span>
+								<img th:if="${user.photos != null}" th:src="@{${user.photosImagePath}}"
+								style="width: 100px"/>
+					</div>
+					
+					<div class="col-8">
+						<div>[[${user.fullName}]]</div>
+						<div>[[${user.roles}]]</div>
+						<div class="mt-2">
+							<a th:if="${user.enabled == true}" class="fas fa-check-circle fa-2x icon-green" 
+								th:href="@{'/users/' + ${user.id} + '/enabled/false'}"
+								title="Disable this user"></a>
+								
+							<a th:if="${user.enabled == false}" class="fas fa-circle fa-2x icon-silver"
+								 th:href="@{'/users/' + ${user.id} + '/enabled/true'}"
+								 title="Enable this user"></a>
+						
+									&nbsp;
+							<a class="fas fa-edit fa-2x icon-green" th:href="@{'/users/edit/' + ${user.id}}"
+									title="edit this user"></a>
+									&nbsp; 
+							<a class="fas fa-trash fa-2x icon-dark link-delete" th:href="@{'/users/delete/' + ${user.id}}"
+									title="delete this user" th:userId="${user.id}"></a>
+						</div>
+					</div>
+					<div>&nbsp;</div>
+				</div>
+			</div>
+			
+			
+			<!-- IF -->
+			<div class="text-center m-1" th:if="${totalItems > 0}">
+				<span>Showing Users # [[${startCount}]] to [[${endCount}]] of [[${totalItems}]]</span>
+			</div>
+			
+			<!-- ELSE -->
+			<div class="text-center m-1" th:unless="${totalItems > 0}">
+				<span>No users found</span>
+			</div>
+			
+			<!-- only display pagination when there are users; else, no users no pagination -->
+			<div th:if="${totalPages > 1}">
+				<nav>
+					  <ul class="pagination justify-content-center flex-wrap">
+					  
+					  	<li th:class=" ${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+					  		<a th:replace="fragments :: page_link(1, 'First')"></a>
+				    	</li>
+					  
+					    <li th:class=" ${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+					    	<a th:replace="fragments :: page_link(${currentPage - 1 }, 'previous')"></a>
+				    	</li>
+					    	
+					    <!-- org.thymeleaf.expression.Numbers class, An object of this class is usually available in variable evaluation expressions with the name #numbers. -->
+					    <li th:class="${currentPage != i ? 'page-item' : 'page-item active'}" 
+					    	th:each="i : ${#numbers.sequence(1, totalPages)}">
+					    	<a th:replace="fragments :: page_link(${i}, ${i})"></a>
+					    </li>
+					    
+					    <li  th:class=" ${currentPage < totalPages ? 'page-item' : 'page-item disabled'}">
+					    	<a th:replace="fragments :: page_link(${currentPage + 1}, 'Next')"></a>
+					    </li>
+					    
+					    <li th:class=" ${currentPage < totalPages ? 'page-item' : 'page-item disabled'}">
+							<a th:replace="fragments :: page_link(${totalPages}, 'Last')"></a>		
+					    </li>
+					  </ul>
+				</nav>
+			</div>
+			
+			
+			
+			<div class="modal fade text-center" id="confirmModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					
+						<div class="modal-header">
+							<h4 class="modal-title">Delete Confirmation</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						
+						<div class="modal-body">
+							<span id="confirmText"></span>
+						</div>
+						
+						<div class="modal-footer">
+							<a class="btn btn-success" href="" id="yesButton">Yes</a>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- footer -->
+			<div th:replace="fragments :: footer"></div>
+
+
+	</div>
+	
+	
+<script th:src="@{/js/common_list.js}">	
+<script type="text/javascript">
+
+	moduleURL = "[[@{/categories}]]";
+	
+	
+
+</script>
+	
+</body>
+
+</html>

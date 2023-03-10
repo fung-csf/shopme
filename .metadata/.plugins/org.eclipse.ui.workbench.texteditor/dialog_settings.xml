@@ -6,6 +6,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="clearFilter"/>
 			<item value="link-delete"/>
 			<item value="/users/"/>
 			<item value="sec"/>
@@ -13,7 +14,6 @@
 			<item value="user"/>
 			<item value="name=&quot;image&quot;"/>
 			<item value="fileImage"/>
-			<item value="email"/>
 		</list>
 		<list key="replacehistory">
 		</list>

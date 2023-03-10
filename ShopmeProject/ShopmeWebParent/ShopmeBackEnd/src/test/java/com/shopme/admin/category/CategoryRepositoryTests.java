@@ -1,8 +1,6 @@
 package com.shopme.admin.category;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.catchException;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 
 import java.util.List;
 import java.util.Set;
@@ -12,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.annotation.Rollback;
 
 import com.shopme.common.entity.Category;
@@ -128,12 +127,33 @@ public class CategoryRepositoryTests {
 
 	}
 	
-	
 	@Test
 	public void testListRootCategories() {
 		
-		List<Category> rootCategories = repo.findRootCategories();
+		List<Category> rootCategories = repo.findRootCategories(Sort.by("name").ascending());
 		rootCategories.forEach(cat -> System.out.println(cat.getName()));
+		
+	}
+	
+	@Test
+	public void testFindByName() {
+		
+		String name = "Computers";
+		Category category = repo.findByName(name);
+		
+		assertThat(category).isNotNull();
+		assertThat(category.getName()).isEqualTo(name);
+		
+	}
+	
+	@Test
+	public void testFindByAlias() {
+		
+		String alias = "electronics";
+		Category category = repo.findByAlias(alias);
+		
+		assertThat(category).isNotNull();
+		assertThat(category.getAlias()).isEqualTo(alias);
 		
 	}
 	

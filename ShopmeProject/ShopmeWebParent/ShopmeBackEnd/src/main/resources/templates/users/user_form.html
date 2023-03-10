@@ -114,6 +114,9 @@
 			</div>
 			
 			
+		<!-- modal dialogue-->
+		<div th:replace="modal_fragments :: modal_dialog"></div>
+			
 		<!-- footer -->
 		<div th:replace="fragments :: footer"></div>
 
@@ -141,26 +144,18 @@
 				//submit the form when email is unique
 				form.submit();
 			} else if (response == "Duplicated") {
-				showModalDialog("Warning", "there is another user with the email "+ userEmail);
+				showWarningModal( "there is another user with the email "+ userEmail);
 			}else {
-				showModalDialog("Error", "unkown response from server");
+				showErrorModal( "unkown response from server");
 			}
 			
 		}).fail(function(){
-			showModalDialog("Error", "could not connect to server");
+			showErrorModal( "could not connect to server");
 		});
 		
 		/* onsubmit = "return false", (stops the submission of form) */
 		return false;
 	}
-	
-	
-	function showModalDialog(title, message) {
-		$("#modalTitle").val(title);
-		$("#modalBody").val(message);
-		$("#modalDialog").modal();
-	}
-	
 	
 </script>
 
