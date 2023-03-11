@@ -1,6 +1,5 @@
 package com.shopme.admin.security;
 
-import org.aspectj.weaver.ast.And;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -55,8 +54,7 @@ public class WebSecurityConfig {
 		// custom login page at "/login" - handler method in MainController class
 		http.authorizeHttpRequests()
 			.requestMatchers("/users/**").hasAuthority("Admin")
-			.requestMatchers("/categories/**").hasAnyAuthority("Admin", "Editor")
-			.requestMatchers("/brands/**").hasAnyAuthority("Admin", "Editor")
+			.requestMatchers("/categories/**", "/brands/**").hasAnyAuthority("Admin", "Editor")
 			.requestMatchers("/products/**").hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
 			.requestMatchers("/customers/**").hasAnyAuthority("Admin", "Salesperson")
 			.requestMatchers("/shipping/**").hasAnyAuthority("Admin", "Salesperson")

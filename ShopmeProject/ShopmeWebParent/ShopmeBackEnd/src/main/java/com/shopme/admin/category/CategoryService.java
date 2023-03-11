@@ -14,6 +14,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.support.Repositories;
+import org.springframework.scheduling.support.SimpleTriggerContext;
 import org.springframework.stereotype.Service;
 
 import com.shopme.common.entity.Category;
@@ -29,7 +30,7 @@ public class CategoryService {
 	@Autowired
 	private CategoryRepository repo;
 
-	public List<Category> listByPage(CategoryPageInfo pageInfo, int pageNum, String sortDir) {
+	public List<Category> listByPage(CategoryPageInfo pageInfo, int pageNum, String sortDir, String keyword) {
 
 		Sort sort = Sort.by("name");
 
@@ -38,17 +39,34 @@ public class CategoryService {
 		} else if (sortDir.equals("desc")) {
 			sort = sort.descending();
 		}
-
 		// page number start from zero
 		Pageable pageable = PageRequest.of(pageNum - 1, ROOT_CATEGORIES_PER_PAGE, sort);
 
-		Page<Category> pageCategories = repo.findRootCategories(pageable);
+		Page<Category> pageCategories = null;
+		
+		if (keyword != null && !keyword.isEmpty()) {
+			pageCategories = repo.search(keyword, pageable);	
+		} else {
+			pageCategories = repo.findRootCategories(pageable);
+		}
+
 		List<Category> rootCategories = pageCategories.getContent();
 
 		pageInfo.setTotalElements(pageCategories.getTotalElements());
 		pageInfo.setTotalPages(pageCategories.getTotalPages());
-		
-		return listHierarchicalCategories(rootCategories, sortDir);
+
+		if (keyword != null && !keyword.isEmpty()) {
+			List<Category> searchResult = pageCategories.getContent();
+			for (Category category : searchResult) {
+				//hasChildren to hide delete button(dustbin icon in categories view), cannot delete categories that has children
+				category.setHasChildren(category.getChildren().size() > 0);
+			}
+			
+			return searchResult;
+			
+		} else {
+			return listHierarchicalCategories(rootCategories, sortDir);
+		}
 	}
 
 	private List<Category> listHierarchicalCategories(List<Category> rootCategories, String sortDir) {

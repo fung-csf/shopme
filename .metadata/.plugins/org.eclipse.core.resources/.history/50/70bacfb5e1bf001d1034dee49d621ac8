@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments :: page_head('Users - Shopme Admin')}"/>
+
+<body>
+	<div class="container-fluid">
+		
+		<!-- navigation bar -->
+		<div th:replace="~{navigation :: menu}"></div>
+
+		<div>
+			<h2>Manage Users</h2>
+			<a th:href="@{/users/new}" class="fas fa-user-plus fa-2x icon-dark mr-2"></a>
+			
+			<a th:href="@{/users/export/csv}" class="fas fa-file-csv fa-2x icon-dark mr-2"></a>
+		</div>
+		
+		
+		
+		<!-- redirect message from controller -->
+		<div th:if="${message != null}" class="alert alert-success text-center">
+			[[${message}]]
+		</div>
+			
+		<!-- search form -->	
+		<div th:replace="~{fragments :: search_form('/users/page/1')}"></div>
+
+			<!-- css class to display this table in large screens only , refer to static/style.css for more info-->
+			<div class="full-details">
+				<table class="table table-bordered table-striped table-hover table-responsive-xL">
+					<thead class="thead-dark">
+						<tr>
+							<!-- refer to templates/fragments.html for fragment code-->
+							
+							<th class="hideable-column">
+								<th th:replace="~{fragments :: column_link('/users', 'id', 'User ID', 'tag')}"/>
+							</th>
+							
+							<th>Photos</th>
+							
+							<th class="hideable-column">
+								<th th:replace="~{fragments :: column_link('/users', 'email', 'Email', 'tag')}"/>
+							</th>
+							
+							<th th:replace="~{fragments :: column_link('/users', 'firstName', 'First Name', 'none')}"/>
+							<th th:replace="~{fragments :: column_link('/users', 'lastName', 'Last Name', 'none')}"/>
+							<th>Roles</th>
+							<th th:replace="~{fragments :: column_link('/users', 'enabled', 'Enabled', 'none')}"/>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="user : ${listUsers}">
+							<td class="hideable-column">[[${user.id}]]</td>
+							<td>
+								<span th:if="${user.photos == null}" class="fas fa-portrait fa-3x icon-dark"></span>
+								<img th:if="${user.photos != null}" th:src="@{${user.photosImagePath}}"
+								style="width: 100px"/>
+							</td>
+							<td class="hideable-column">[[${user.email}]]</td>
+							<td>[[${user.firstName}]]</td>
+							<td>[[${user.lastName}]]</td>
+							<td>[[${user.roles}]]</td>
+							
+							<td>
+								<div th:replace="~{fragments :: status(${user.enabled}, 'user', '/users/' + ${user.id})}" />
+							</td>
+							<td>
+								<div th:replace="~{fragments :: edit('user', '/users/edit/' + ${user.id})}" />	
+								&nbsp; &nbsp; 
+								<div th:replace="~{fragments :: delete('user', ${user.id}, '/users/delete/' + ${user.id}, true)}" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			<!-- css class to display this <div> on mobile screens only, refer to /static/style.css for more info-->
+			<div class="less-details">
+				
+				<div th:each="user : ${listUsers}" class="row m-1">
+					
+					<div class="col-4">
+						
+						<span th:if="${user.photos == null}" class="fas fa-portrait fa-3x icon-dark"></span>
+								<img th:if="${user.photos != null}" th:src="@{${user.photosImagePath}}"
+								style="width: 100px"/>
+					</div>
+					
+					<div class="col-8">
+						<div>[[${user.fullName}]]</div>
+						<div>[[${user.roles}]]</div>
+						<div class="mt-2">
+							<div th:replace="~{fragments :: status(${user.enabled}, 'user', '/users/' + ${user.id})}" />
+							&nbsp;
+							<div th:replace="~{fragments :: edit('user', '/users/edit/' + ${user.id})}" />
+							&nbsp; 
+							<div th:replace="~{fragments :: delete('user', ${user.id}, '/users/delete/' + ${user.id}, true)}" />
+						</div>
+					</div>
+					<div>&nbsp;</div>
+				</div>
+			</div>
+			
+			
+			<!-- pagination -->			
+			<div th:replace="~{fragments :: pagination('/users', 'users' )}"></div>
+			
+			<!-- delete confirmation modal  -->
+			<div th:replace="~{modal_fragments :: confirm_modal}"></div>
+			
+			<!-- footer -->
+			<div th:replace="~{fragments :: footer}"></div>
+
+
+	</div>
+	
+<script type="text/javascript">
+
+//confirmation modal dialogue for delete user
+$(document).ready(function(){
+	$(".link-delete").on("click", function(e){
+		//stop the <a> tag default behaviour and pop out a confirmation modal dialogue
+		e.preventDefault();
+		//alert($(this).attr("href"));
+		link = $(this);
+		userId = link.attr("userId");
+		$("#yesButton").attr("href", link.attr("href"));
+		$("#confirmText").text("Are you sure you want to delete this user ID " + userId + "?");
+		$("#confirmModal").modal();
+	});
+});
+
+	function clearFilter(){
+		window.location = "[[@{/users}]]";
+	}
+
+
+</script>
+	
+</body>
+
+</html>

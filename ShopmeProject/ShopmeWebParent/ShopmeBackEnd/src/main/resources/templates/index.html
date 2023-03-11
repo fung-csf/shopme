@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
-<head th:replace="fragments :: page_head('Home - Shopme Admin')"/>
+<head th:replace="~{fragments :: page_head('Home - Shopme Admin')}"/>
 
 <body>
 	<div class="container-fluid">
 			
 			<!-- navigation bar -->
-		<div th:replace="navigation :: menu"></div>
+		<div th:replace="~{navigation :: menu}"></div>
 
 		<div>
 			<h2>Shopme Control Panel</h2>
@@ -20,7 +20,7 @@
 		</div>
 
 		<!-- footer -->
-		<div th:replace="fragments :: footer"></div>
+		<div th:replace="~{fragments :: footer}"></div>
 
 	</div>
 

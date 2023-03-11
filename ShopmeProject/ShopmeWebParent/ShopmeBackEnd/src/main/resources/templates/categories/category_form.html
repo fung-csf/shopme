@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="fragments :: page_head(${pageTitle})"/>
+<head th:replace="~{fragments :: page_head(${pageTitle})}"/>
 
 <body>
 	<div class="container-fluid">
 
 	<!-- navigation bar -->
-	<div th:replace="navigation :: menu"></div>
+	<div th:replace="~{navigation :: menu}"></div>
 
 	<div>
 		<h2>Manage Categories | [[${pageTitle}]]</h2>
@@ -76,10 +76,10 @@
 			
 			
 		<!-- modal dialogue-->
-		<div th:replace="modal_fragments :: modal_dialog"></div>	
+		<div th:replace="~{modal_fragments :: modal_dialog}"></div>	
 			
 		<!-- footer -->
-		<div th:replace="fragments :: footer"></div>
+		<div th:replace="~{fragments :: footer}"></div>
 
 	</div>
 			
