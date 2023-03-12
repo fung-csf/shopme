@@ -83,7 +83,7 @@ public class Product {
 //	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 //	private Set<ProductImage> images = new HashSet<>();
 //	
-//	/* OneToMany -> One product to Many details*/
+//	/* OneToMany -> One product to Many details */
 //	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 //	private List<ProductDetail> details = new ArrayList<>();
 
