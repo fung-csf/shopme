@@ -36,15 +36,17 @@ $(document).ready(function() {
 	
 	
 	function showModalDialog(title, message) {
-		$("#modalTitle").val(title);
-		$("#modalBody").val(message);
+		$("#modalTitle").text(title);
+		$("#modalBody").text(message);
 		$("#modalDialog").modal();
 	}
-	
-	function showErrorModal(message){
+
+	function showErrorModal(message) {
 		showModalDialog("Error", message);
 	}
 	
-	function showWarningModal(message){
+	function showWarningModal(message) {
 		showModalDialog("Warning", message);
 	}
+	
+	
