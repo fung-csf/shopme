@@ -1,0 +1,60 @@
+package com.shopme.admin;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class MvcConfig implements WebMvcConfigurer {
+
+	
+	/*
+	 * In short, we can tell Spring MVC to map a given URL (e.g. "/user-photos") 
+	 * to any directory (e.g. D:/ShopmeProject/ShopmeBackend/user-photos) 
+	 * and expose the resources (images, js, css...) in this directory to 
+	 * the web clients (browsers) - that's the primary purpose
+	 *  of using resource handlers in Spring MVC.
+	 * 
+	 * Because the assets are not located in the src/main/resources/static folder
+	 * */
+	
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
+		String dirName = "user-photos";
+		Path userPhotoDir = Paths.get(dirName);
+		String userPhotosPath = userPhotoDir.toFile().getAbsolutePath();
+		
+		// add /** to allow all files under this directory to be available to client
+		registry.addResourceHandler("/" + dirName + "/**")
+		.addResourceLocations("file:/" + userPhotosPath + "/");
+		
+		
+		String categoryImagesDirName = "../category-images";
+		Path categoryImagesDir = Paths.get(categoryImagesDirName);
+		String categoryImagesPath = categoryImagesDir.toFile().getAbsolutePath();
+		
+		// add /** to allow all files under this directory to be available to client
+		registry.addResourceHandler("/category-images/**")
+		.addResourceLocations("file:/" + categoryImagesPath + "/");
+		
+		
+		String brandLogosDirName = "../brand-logos";
+		Path brandLogosDir = Paths.get(brandLogosDirName);
+		String brandLogosPath = brandLogosDir.toFile().getAbsolutePath();
+		
+		// add /** to allow all files under this directory to be available to client
+		registry.addResourceHandler("/brand-logos/**")
+		.addResourceLocations("file:/" + categoryImagesPath + "/");
+		
+		
+		
+	}
+	
+	
+	
+	
+}

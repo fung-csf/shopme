@@ -25,9 +25,9 @@
 			<div class="col-sm-8">
 				<input type="hidden" th:field="*{logo}" />
 				<input type="file" id="fileImage" name="fileImage" accept="image/png, image/jpeg"
-					th:required="${brand.id == null}"
-					class="mb-2" />
-				
+					th:required="${brand.id == null}"  
+					class="mb-2" />	 <!-- if ${brand.id == null} evaluate to true, it is a new brand and 
+									 the brand image is required; else if evaluate to false, it is an existing brand with an existing image -->
 				<div class="mt-2">
 				 	<img id="thumbnail" alt="Image preview" th:src="@{${brand.logoPath}}"
 						class="img-fluid" /> 
@@ -77,7 +77,7 @@
 		divChosenCategories = $("#chosenCategories");
 		
 		dropdownCategories.change(function() {
-			divChosenCategories.empty();
+			divChosenCategories.empty(); /* clear all the children object in the div when there is a change, then show the chosen categories*/
 			showChosenCategories();
 		});
 		
@@ -88,7 +88,7 @@
 		dropdownCategories.children("option:selected").each(function() {
 			selectedCategory = $(this);
 			catId = selectedCategory.val();
-			catName = selectedCategory.text().replace(/-/g, "");
+			catName = selectedCategory.text().replace(/-/g, "");  /*regular expression */
 			
 			divChosenCategories.append("<span class='badge badge-secondary m-1'>" + catName + "</span>");
 		});
