@@ -48,10 +48,7 @@
 						<li class="nav-item">
 							<a class="nav-link" th:href="@{/customers}">Customers</a>
 						</li>
-					</th:block>
-					
-					
-					<th:block sec:authorize="hasAnyAuthority('Admin', 'Salesperson')">
+						
 						<li class="nav-item">
 							<a class="nav-link" th:href="@{/shipping}">Shipping</a>
 						</li>

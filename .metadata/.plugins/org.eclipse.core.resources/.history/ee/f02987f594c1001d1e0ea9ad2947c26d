@@ -1,0 +1,24 @@
+package com.shopme.admin.product;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.shopme.admin.brand.BrandService;
+import com.shopme.admin.category.CategoryService;
+
+@Controller
+public class ProductController {
+
+	@Autowired private ProductService productService;
+	@Autowired private BrandService brandService;
+	@Autowired private CategoryService categoryService;
+	
+	
+	@GetMapping("/products")
+	public String listFirstPage(Model model) {
+		return "";
+	}
+	
+}
