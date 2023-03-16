@@ -52,11 +52,9 @@ private static final Logger LOGGER = LoggerFactory.getLogger(FileUploadUtil.clas
 	}
 	
 	public static void removeDir(String dir) {
-		//remove all the files in directory
 		cleanDir(dir);
 		
 		try {
-			//delete the directory
 			Files.delete(Paths.get(dir));
 		} catch (IOException e) {
 			LOGGER.error("Could not remove directory: " + dir);
