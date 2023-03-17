@@ -30,8 +30,8 @@
 		<item value="org.eclipse.userstorage:1.2.0.v20210517-0327"/>
 		<item value="org.eclipse.wst.common.fproj:3.7.3.v202111212041"/>
 		<item value="org.eclipse.wst.json_ui.feature:1.1.10.v202211200019"/>
-		<item value="org.eclipse.wst.web_ui.feature:3.28.0.v202211200019"/>
-		<item value="org.eclipse.wst.xml_ui.feature:3.28.0.v202211200019"/>
+		<item value="org.eclipse.wst.web_ui.feature:3.29.0.v202301190221"/>
+		<item value="org.eclipse.wst.xml_ui.feature:3.29.0.v202212250111"/>
 		<item value="org.jboss.tools.m2e.wro4j.feature:1.2.1.202301111328"/>
 		<item value="org.sonatype.m2e.egit.feature:0.17.0.202209271423"/>
 	</list>
@@ -43,7 +43,7 @@
 	</section>
 	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/target/classes/com/shopme/admin/user/UserRepository.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeProject/ShopmeCommon/target/classes/com/shopme/common/entity/User.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeCommon/src/main/java/com/shopme/common/entity/User.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/target/classes/com/shopme/admin/FileUploadUtil.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeWebParent/ShopmeBackEnd/target/classes/com/shopme/admin/FileUploadUtil.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/target/classes/com/shopme/admin/user/UserRepository.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeProject/ShopmeCommon/target/classes/com/shopme/common/entity/User.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeCommon/src/main/java/com/shopme/common/entity/User.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/target/classes/com/shopme/admin/FileUploadUtil.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeWebParent/ShopmeBackEnd/target/classes/com/shopme/admin/FileUploadUtil.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ShopmeProject/ShopmeCommon/target/classes/com/shopme/common/entity/product/ProductDetail.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
 		<item key="ShowDerived" value="false"/>
 		<item key="FilterByLocation" value="false"/>
 		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
