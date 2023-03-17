@@ -34,6 +34,7 @@
 					accept="image/png, image/jpeg" />
 			</div>
 			
+			<!-- hidden fields to reconstruct ProductImage objects in controller for saving to database -->
 			<input type="hidden" name="imageIDs" th:id="'imageId' + ${status.index}" 
 				th:value="${productImage.id}"/>
 			<input type="hidden" name="imageNames" th:id="'imageName' + ${status.index}" 

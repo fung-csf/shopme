@@ -88,6 +88,7 @@ public class Product {
 	 * 
 	 * mappedBy product field in ProductImage type
 	 */
+	/* REFER TO video 118 at time stamp 25:30 for orphanRemoval*/
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<ProductImage> images = new HashSet<>();
 
@@ -296,6 +297,11 @@ public class Product {
 	public void addDetail(String name, String value) {
 
 		this.details.add(new ProductDetail(name, value, this));
+	}
+	
+	public void addDetail(Integer id, String name, String value) {
+
+		this.details.add(new ProductDetail(id, name, value, this));
 	}
 
 	public boolean containsImageName(String imageName) {

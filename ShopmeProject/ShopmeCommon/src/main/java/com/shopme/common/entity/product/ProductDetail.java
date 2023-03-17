@@ -31,7 +31,6 @@ public class ProductDetail {
 	}
 
 	public ProductDetail(Integer id, String name, String value, Product product) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.value = value;

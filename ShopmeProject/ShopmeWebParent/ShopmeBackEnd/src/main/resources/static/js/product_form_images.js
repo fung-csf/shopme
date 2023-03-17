@@ -31,8 +31,16 @@ $(document).ready(function(){
 function showExtraImageThumbnail(fileInput, index) {
 	
 	var file = fileInput.files[0];
-	var reader = new FileReader();
 	
+	fileName = file.name;
+	
+	/*when image is changed, change the hidden input value*/
+	imageNameHiddenField = $("#imageName" + index);
+	if(imageNameHiddenField.length){
+		imageNameHiddenField.val(fileName);
+	}
+	
+	var reader = new FileReader();
 	/* 
 		the event.target property returns the html element that triggered an event
 	*/
