@@ -59,7 +59,7 @@ public class BrandController {
 		model.addAttribute("startCount", startCount);
 		model.addAttribute("endCount", endCount);
 		model.addAttribute("totalItems", page.getTotalElements());
-		model.addAttribute("sortField", "name");
+		model.addAttribute("sortField", sortField);
 		model.addAttribute("sortDir", sortDir);
 		model.addAttribute("reverseSortDir", reverseSortDir);
 		model.addAttribute("keyword", keyword);
