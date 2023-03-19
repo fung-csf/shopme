@@ -1,7 +1,0 @@
-package com.shopme.common.entity.product;
-
-@Entity
-@Table(name = "product_details")
-public class ProductDetail {
-
-}

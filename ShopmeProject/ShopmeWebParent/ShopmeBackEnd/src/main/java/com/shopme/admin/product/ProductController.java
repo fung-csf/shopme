@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -27,6 +28,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.shopme.admin.FileUploadUtil;
 import com.shopme.admin.brand.BrandService;
 import com.shopme.admin.category.CategoryService;
+import com.shopme.admin.security.ShopmeUserDetails;
 import com.shopme.common.entity.Brand;
 import com.shopme.common.entity.Category;
 import com.shopme.common.entity.product.Product;
@@ -55,10 +57,10 @@ public class ProductController {
 			@Param("sortField") String sortField, 
 			@Param("sortDir") String sortDir, 
 			@Param("keyword") String keyword, 
-			@Param("categoryId") Integer CategoryId) {
+			@Param("categoryId") Integer categoryId) {
 		
 		
-		Page<Product> page = productService.listByPage(pageNum, sortField, sortDir, keyword);
+		Page<Product> page = productService.listByPage(pageNum, sortField, sortDir, keyword, categoryId);
 		List<Product> listProducts = page.getContent();
 
 		List<Category> listCategories = categoryService.listCategoriesUsedInForm();
@@ -71,6 +73,8 @@ public class ProductController {
 
 		String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
 
+		if(categoryId != null) model.addAttribute("categoryId", categoryId); 
+		
 		model.addAttribute("currentPage", pageNum);
 		model.addAttribute("totalPages", page.getTotalPages());
 		model.addAttribute("startCount", startCount);
@@ -104,14 +108,23 @@ public class ProductController {
 
 	@PostMapping("/products/save")
 	public String saveProduct(@ModelAttribute("product") Product product, RedirectAttributes ra,
-			@RequestParam("fileImage") MultipartFile mainImageMultipart,
-			@RequestParam("extraImage") MultipartFile[] extraImageMultiparts,
+			@RequestParam(value = "fileImage", required = false) MultipartFile mainImageMultipart,
+			@RequestParam(value = "extraImage", required = false) MultipartFile[] extraImageMultiparts,
 			@RequestParam(name = "detailIDs", required = false) String[] detailIDs,
 			@RequestParam(name = "detailNames", required = false) String[] detailNames,
 			@RequestParam(name = "detailValues", required = false) String[] detailValues,
 			@RequestParam(name = "imageIDs", required = false) String[] imageIDs,
-			@RequestParam(name = "imageNames", required = false) String[] imageNames) throws IOException {
+			@RequestParam(name = "imageNames", required = false) String[] imageNames,
+			@AuthenticationPrincipal ShopmeUserDetails loggedUser) throws IOException {
 
+		
+		/*salesperson can only edit the price. Thus, save the price only*/
+		if(loggedUser.hasRole("Salesperson")) {
+			productService.saveProductPrice(product);
+			ra.addFlashAttribute("message", "The product has been saved successfully.");
+			return "redirect:/products";
+		}
+		
 		setMainImageName(mainImageMultipart, product);
 		setExistingExtraImageNames(imageIDs, imageNames, product);
 		setNewExtraImageNames(extraImageMultiparts, product);
@@ -279,23 +292,24 @@ public class ProductController {
 	}
 
 	@GetMapping("/products/edit/{id}")
-	public String editProduct(@PathVariable("id") Integer id, Model model, RedirectAttributes ra) {
+	public String editProduct(@PathVariable("id") Integer id, Model model, 
+			RedirectAttributes ra, @AuthenticationPrincipal ShopmeUserDetails loggedUser) {
 
-//		@AuthenticationPrincipal ShopmeUserDetails loggedUser
+		
 		try {
 			Product product = productService.get(id);
 			List<Brand> listBrands = brandService.listAll();
 			Integer numberOfExistingExtraImages = product.getImages().size();
 
-//			boolean isReadOnlyForSalesperson = false;
+			boolean isReadOnlyForSalesperson = false;
 
-//			if (!loggedUser.hasRole("Admin") && !loggedUser.hasRole("Editor")) {
-//				if (loggedUser.hasRole("Salesperson")) {
-//					isReadOnlyForSalesperson = true;
-//				}
-//			}
+			if (!loggedUser.hasRole("Admin") && !loggedUser.hasRole("Editor")) {
+				if (loggedUser.hasRole("Salesperson")) {
+					isReadOnlyForSalesperson = true;
+				}
+			}
 
-//			model.addAttribute("isReadOnlyForSalesperson", isReadOnlyForSalesperson);
+			model.addAttribute("isReadOnlyForSalesperson", isReadOnlyForSalesperson);
 			model.addAttribute("product", product);
 			model.addAttribute("listBrands", listBrands);
 			model.addAttribute("pageTitle", "Edit Product (ID: " + id + ")");

@@ -32,7 +32,7 @@
 	<th th:fragment="column_link(moduleURL, fieldName, columnLabel, removeTag)" th:remove="${removeTag}">
 		<!-- follow the sort order of another sortField; if the other field is sortDir="asc", then the newly selected column will be sortDir="asc" too -->
 		<a class="text-white"
-		   th:href="@{${moduleURL} + '/page/' + ${currentPage} + '?sortField=' + ${fieldName} + '&sortDir=' + ${sortField != fieldName ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">
+		   th:href="@{${moduleURL} + '/page/' + ${currentPage} + '?sortField=' + ${fieldName} + '&sortDir=' + ${sortField != fieldName ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''} + ${categoryId != null ? '&categoryId=' + categoryId : ''} }">
 			[[${columnLabel}]]
 		</a>
 		
@@ -43,7 +43,7 @@
 	
 	<a th:fragment="page_link(moduleURL, pageNum, label)"
 	   class="page-link"
-	   th:href= "@{${moduleURL} + '/page/' + ${pageNum} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">[[${label}]]</a>
+	   th:href= "@{${moduleURL} + '/page/' + ${pageNum} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''} + ${categoryId != null ? '&categoryId=' + categoryId : ''} }">[[${label}]]</a>
 
 	
 	<div th:fragment="status(enabled, entityName, entityURL)" th:remove="tag">
