@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.TreeSet"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Modifying"/>
     <fullyQualifiedTypeName name="java.awt.print.Pageable"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
     <fullyQualifiedTypeName name="org.springframework.security.authentication.AnonymousAuthenticationToken"/>
+    <fullyQualifiedTypeName name="com.shopme.admin.product.ProductSaveHelper"/>
 </qualifiedTypeNameHistroy>
