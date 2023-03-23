@@ -1,6 +1,0 @@
-package com.shopme.admin.brand;
-
-/*data transfer object*/
-public class CategoryDTO {
-
-}

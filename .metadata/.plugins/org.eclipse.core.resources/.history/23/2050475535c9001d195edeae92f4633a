@@ -1,0 +1,12 @@
+package com.shopme.product;
+
+public class ProductController {
+	
+	@Autowired private ProductService productService;
+	@Autowired private CategoryService categoryService;
+	
+	@GetMapping("/c/{category_alias}")
+	public String viewCategory(@PathVariable("category_alias") String alias) {
+		return "products_by_category";
+	}
+}

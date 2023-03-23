@@ -1,0 +1,29 @@
+
+<!-- 
+
+This general error page will be displayed for HTTP error status code 404
+
+ -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments :: page_head('Error - Shopme', 'none')}"/>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container-fluid">
+			
+			<!-- navigation bar -->
+		<div th:replace="~{navigation :: header_menu}"></div>
+		<div class="m-3">
+			<h2>Sorry, the requested page could not be found</h2>
+		</div>
+
+		<!-- footer -->
+		<div th:replace="~{navigation :: footer_menu}"></div>
+
+	</div>
+</body>
+</html>

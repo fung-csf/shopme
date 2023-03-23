@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="~{fragments :: page_head('Home - Shopme Admin', 'none')}"/>
+		<meta charset="ISO-8859-1">
+		<title>Welcome to Shopme </title>
+		
+	</head>
+	
+	<body>
+		
+		<h1>Welcome to Shopme eCommerce</h1>
+	</body>
+	
+</html>

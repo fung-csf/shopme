@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import com.shopme.common.entity.Brand;
 import com.shopme.common.entity.product.Product;
+import com.shopme.common.exception.ProductNotFoundException;
 
 import jakarta.transaction.Transactional;
 
