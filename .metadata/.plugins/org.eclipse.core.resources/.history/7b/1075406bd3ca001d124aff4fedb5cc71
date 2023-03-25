@@ -1,0 +1,26 @@
+package com.shopme.common.entity.setting;
+
+import java.util.List;
+
+import org.aspectj.weaver.NewConstructorTypeMunger;
+
+public class SettingBag {
+
+	private List<Setting> listSettings;
+
+	public SettingBag(List<Setting> listSettings) {
+		this.listSettings = listSettings;
+	}
+	
+	public Setting get(String key) {
+		
+		int index = listSettings.indexOf(new Setting(key));
+		
+		//check if setting object exist
+		if(index >= 0) {
+			return listSettings.get(index);
+		}
+		
+		return;
+	}
+}

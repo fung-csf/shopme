@@ -17,4 +17,13 @@ public interface ProductRepository extends CrudRepository<Product, Integer>, Pag
 	
 	
 	public Product findByAlias(String alias);
+	
+	/* this is a MySQL query, not the usual JavaPersistince query language
+	 * use full text search check video-134 for more details*/
+	@Query(value = "SELECT * FROM products WHERE enabled = true AND "
+			+ "MATCH(name, short_description, full_description) AGAINST (?1)", 
+			nativeQuery = true)
+	public Page<Product> search(String keyword, Pageable pageable);
+	
+	
 }

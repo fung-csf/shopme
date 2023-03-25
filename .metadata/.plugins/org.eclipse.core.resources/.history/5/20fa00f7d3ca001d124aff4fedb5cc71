@@ -1,0 +1,37 @@
+package com.shopme.common.entity.setting;
+
+import java.util.List;
+
+import org.aspectj.weaver.NewConstructorTypeMunger;
+
+public class SettingBag {
+
+	private List<Setting> listSettings;
+
+	public SettingBag(List<Setting> listSettings) {
+		this.listSettings = listSettings;
+	}
+
+	public Setting get(String key) {
+
+		// need to implement the equals() method in Setting Class in order to use
+		// indexOf() method.
+		int index = listSettings.indexOf(new Setting(key));
+
+		// if setting object exist, return the object
+		if (index >= 0) {
+			return listSettings.get(index);
+		}
+
+		return null;
+	}
+	
+	public String getValue(String key) {
+		Setting setting = get(key);
+		
+		if(setting != null) {
+			return setting.getValue();
+		}
+	}
+	
+}

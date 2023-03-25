@@ -1,0 +1,5 @@
+package com.shopme.setting;
+
+class SettingRepositoryTests {
+
+}
