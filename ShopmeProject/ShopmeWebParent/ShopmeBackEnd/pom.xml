@@ -23,6 +23,11 @@
 		<artifactId>spring-boot-devtools</artifactId>
     </dependency>
 
+	<dependency>
+	   <groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-test</artifactId>
+    </dependency>
+
      <!--for exporting user list to csv-->
 	<dependency>
 		<groupId>net.sf.supercsv</groupId>

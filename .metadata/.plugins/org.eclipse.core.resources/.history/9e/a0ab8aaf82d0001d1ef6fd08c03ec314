@@ -1,0 +1,9 @@
+package com.shopme.admin.setting.country;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.shopme.common.entity.Country;
+
+public class CountryRepository implements CrudRepository<Country, Integer> {
+
+}
