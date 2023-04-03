@@ -1,0 +1,9 @@
+package com.shopme.customer;
+
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
+public class CustomerService {
+	
+}

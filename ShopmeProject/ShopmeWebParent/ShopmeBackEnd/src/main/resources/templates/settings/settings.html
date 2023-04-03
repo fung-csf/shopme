@@ -32,7 +32,7 @@
 			    <a class="nav-link" data-toggle="tab" href="#mailServer" role="tab">Mail Server</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" data-toggle="tab" href="#mailTemplate" role="tab">Mail Templates</a>
+			    <a class="nav-link" data-toggle="tab" href="#mailTemplates" role="tab">Mail Templates</a>
 			  </li>		
 			  <li class="nav-item">
 			    <a class="nav-link" data-toggle="tab" href="#payment" role="tab">Payment</a>
@@ -82,6 +82,11 @@
 	contextPath= "[[@{/}]]";
 	var csrfHeaderName = "[[${_csrf.headerName}]]";
 	var csrfValue = "[[${_csrf.token}]]";
+	
+	$(document).ready(function() {
+		$("#customerVerificationContent").richText();
+		/* $("#orderConfirmationContent").richText({height: 400}); */
+	});
 	
 </script>
 

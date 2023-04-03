@@ -1,0 +1,6 @@
+package com.shopme.customer;
+
+@Service
+public class CustomerService {
+
+}

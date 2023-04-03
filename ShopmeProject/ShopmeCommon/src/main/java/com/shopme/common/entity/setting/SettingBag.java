@@ -12,7 +12,7 @@ public class SettingBag {
 
 	public Setting get(String key) {
 
-		// need to implement the equals() method in Setting Class in order to use
+		// need to implement the hashCode() and equals() method in Setting Class in order to use
 		// indexOf() method.
 		int index = listSettings.indexOf(new Setting(key));
 
