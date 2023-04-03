@@ -53,8 +53,8 @@ public class WebSecurityConfig {
 		// any request need to be authenticated (require login)
 		// custom login page at "/login" - handler method in MainController class
 		http.authorizeHttpRequests()
-			.requestMatchers("/users/**").hasAuthority("Admin")
-			.requestMatchers("/categories/**", "/brands/**").hasAnyAuthority("Admin", "Editor")
+			.requestMatchers("/users/**", "/settings/**", "/countries/**", "/states/**").hasAuthority("Admin")
+			.requestMatchers("/products/**", "/categories/**", "/brands/**").hasAnyAuthority("Admin", "Editor")
 			
 			.requestMatchers("/products/new", "/products/delete/**").hasAnyAuthority("Admin", "Editor")
 			
@@ -64,16 +64,9 @@ public class WebSecurityConfig {
 			.requestMatchers("/products", "/products/", "/products/detail/**", "/products/page/**")
 				.hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
 			
-			.requestMatchers("/products/**").hasAnyAuthority("Admin", "Editor")
-			
-			
-			.requestMatchers("/customers/**").hasAnyAuthority("Admin", "Salesperson")
-			.requestMatchers("/shipping/**").hasAnyAuthority("Admin", "Salesperson")
+			.requestMatchers("/customers/**", "/shipping/**", "/report/**").hasAnyAuthority("Admin", "Salesperson")
 			.requestMatchers("/orders/**").hasAnyAuthority("Admin", "Salesperson", "Shipper")
-			.requestMatchers("/report/**").hasAnyAuthority("Admin", "Salesperson")
-			.requestMatchers("/articles/**").hasAnyAuthority("Admin", "Editor")
-			.requestMatchers("/menus/**").hasAnyAuthority("Admin", "Editor")
-			.requestMatchers("/settings/**").hasAuthority("Admin")
+			.requestMatchers("/articles/**", "/menus/**").hasAnyAuthority("Admin", "Editor")
 			.anyRequest().authenticated()
 			.and()
 			.formLogin()
