@@ -72,7 +72,7 @@ function deleteCountry() {
 }
 
 function updateCountry() {
-	/*if (!validateFormCountry()) return;*/
+	if (!validateFormCountry()) return;
 	
 	url = contextPath + "countries/save";
 	countryName = fieldCountryName.val();
@@ -101,9 +101,24 @@ function updateCountry() {
 	});	
 }
 
+
+/*
+	need to validate form programmatically as the input fields  are not submitted 
+	via a submit button in form; a validation check will only be executed when the submit button is pressed.
+*/
+function validateFormCountry() {
+	formCountry = document.getElementById("formCountry");
+	if (!formCountry.checkValidity()) {
+		formCountry.reportValidity();
+		return false;
+	}	
+	
+	return true;
+}
+
 function addCountry() {
 
-	/*if (!validateFormCountry()) return;*/
+	if (!validateFormCountry()) return;
 	
 	url = contextPath + "countries/save";
 	countryName = fieldCountryName.val();

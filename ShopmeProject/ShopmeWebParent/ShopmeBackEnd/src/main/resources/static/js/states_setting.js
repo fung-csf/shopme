@@ -125,6 +125,11 @@ function addState() {
 		
 }
 
+/*
+	need to validate form programmatically as the input fields  are not submitted 
+	via a submit button in form; a validation check will only be executed when the submit button is pressed.
+*/
+
 function validateFormState() {
 	formState = document.getElementById("formState");
 	if (!formState.checkValidity()) {

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="searchNavbar"/>
+		<item key="selection" value=""/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
-			<item value="CURRENCY_ID"/>
-			<item value="searchNavBar"/>
-			<item value="productService"/>
-			<item value="hasChildren"/>
+			<item value="mailTemplates"/>
 			<item value="th:replace"/>
-			<item value="auth"/>
-			<item value="AuthenticationPrincipal"/>
-			<item value="princ"/>
+			<item value="register"/>
+			<item value="regis"/>
+			<item value="loadStates4Country"/>
+			<item value="loadCountries4States"/>
+			<item value="dropDownCountriesForStates"/>
+			<item value="buttonLoad4States"/>
 		</list>
 		<list key="replacehistory">
 		</list>
