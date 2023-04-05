@@ -17458,3 +17458,341 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.po
 2023-04-04 16:10:32,405 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-04-04 16:10:32,405 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-04-04 16:10:32,410 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 17:39:58,208 [Worker-10: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-04 17:41:23,814 [Worker-24: Launching ShopmeBackEnd - ShopmeBackEndApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-04-04 17:41:24,138 [Worker-24: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier  to /ShopmeCommon/target/classes
+2023-04-04 17:41:25,450 [Worker-24: Launching ShopmeBackEnd - ShopmeBackEndApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-04-04 17:41:25,720 [Worker-24: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier  to /ShopmeCommon/target/classes
+2023-04-04 17:41:29,985 [Worker-24: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 17:41:31,579 [Worker-24: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 17:41:33,215 [Worker-24: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 17:47:24,326 [Worker-20: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 17:47:24,536 [Worker-20: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 17:47:24,716 [Worker-20: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 17:52:14,324 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 17:52:14,386 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 17:52:15,166 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 17:52:21,491 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-04-04 17:52:21,676 [Worker-21: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier  to /ShopmeCommon/target/classes
+2023-04-04 19:53:42,687 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 19:53:42,690 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 19:53:42,698 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 20:07:11,773 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 20:07:11,927 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 20:07:11,969 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 20:08:11,050 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 20:08:11,070 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 20:08:11,100 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 20:10:13,639 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 20:10:13,653 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 20:10:13,715 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 20:13:54,310 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 20:13:54,326 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 20:13:54,354 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 20:14:44,873 [Worker-62: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 20:14:45,045 [Worker-62: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 20:14:45,228 [Worker-62: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 20:17:17,928 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 20:17:17,944 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 20:17:17,988 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 20:18:16,236 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 20:18:16,252 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 20:18:16,278 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 20:18:21,760 [Worker-71: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 20:18:21,943 [Worker-71: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 20:18:22,173 [Worker-71: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-04 21:49:10,519 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:49:10,691 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 21:49:10,867 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:49:20,497 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:49:20,532 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 21:49:20,592 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:52:13,677 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:52:13,678 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:52:13,683 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:53:20,518 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:53:20,519 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:53:20,530 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:54:01,214 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:54:01,214 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:54:01,220 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:54:30,734 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:54:30,735 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:54:30,740 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:56:22,241 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:56:22,242 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:56:22,252 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:57:13,561 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:57:13,561 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:57:13,569 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:57:58,712 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:57:58,712 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:57:58,717 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:58:18,160 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:58:18,161 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:58:18,165 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:58:24,939 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:58:24,939 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:58:24,943 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:58:58,418 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:58:58,418 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:58:58,423 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 21:59:03,111 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 21:59:03,111 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 21:59:03,115 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 22:02:13,189 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 22:02:13,202 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 22:02:13,222 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 22:02:23,727 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 22:02:23,740 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-04 22:02:23,762 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 22:02:57,437 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 22:02:57,437 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 22:02:57,455 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 22:04:36,751 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 22:04:36,752 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 22:04:36,756 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 22:06:52,853 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 22:06:52,853 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 22:06:52,857 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-04 23:06:12,066 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-04 23:06:12,066 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-04 23:06:12,076 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 09:39:36,747 [Worker-10: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-05 09:42:33,091 [Worker-11: Launching ShopmeBackEnd - ShopmeBackEndApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-04-05 09:42:33,189 [Worker-11: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier  to /ShopmeCommon/target/classes
+2023-04-05 09:42:38,945 [Worker-11: Launching ShopmeBackEnd - ShopmeBackEndApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-04-05 09:42:38,973 [Worker-11: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier  to /ShopmeCommon/target/classes
+2023-04-05 09:42:41,352 [Worker-11: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-05 09:42:41,586 [Worker-11: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-05 09:42:41,810 [Worker-11: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-05 09:42:44,127 [Worker-2: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-05 09:42:44,347 [Worker-2: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-05 09:42:44,576 [Worker-2: Launching ShopmeBackEnd - ShopmeBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier null to /ShopmeCommon/target/classes
+2023-04-05 09:47:29,903 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 09:47:29,933 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 09:47:31,213 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 09:47:33,760 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-04-05 09:47:33,786 [Worker-19: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ShopmeCommon: com.shopme:ShopmeCommon:0.0.1-SNAPSHOT with classifier  to /ShopmeCommon/target/classes
+2023-04-05 09:49:16,683 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-05 09:49:16,684 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 09:49:16,692 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 09:51:25,992 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 09:51:26,011 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 09:51:26,046 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 09:53:25,181 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-05 09:53:25,182 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 09:53:25,186 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:15:40,574 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:15:40,608 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:15:40,707 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:17:36,342 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:17:36,376 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:17:36,535 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:20:16,549 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:20:16,568 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:20:16,599 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:20:42,035 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:20:42,062 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:20:42,109 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:23:04,325 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:23:04,347 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:23:04,390 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:24:43,816 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:24:43,840 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:24:43,876 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:33:45,973 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:33:45,987 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:33:46,015 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:34:12,144 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:34:12,163 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:34:12,189 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:35:52,723 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:35:52,748 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:35:52,790 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:36:47,981 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:36:48,007 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:36:48,041 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:37:27,736 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:37:27,753 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:37:27,788 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:40:05,621 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:40:05,640 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:40:05,675 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:40:13,393 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:40:13,411 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:40:13,441 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:40:41,621 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:40:41,633 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:40:41,660 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:43:47,556 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:43:47,579 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:43:47,617 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:44:00,006 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:44:00,023 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:44:00,057 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:50:03,599 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:50:03,619 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:50:03,661 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:53:48,404 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:53:48,423 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:53:48,458 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:54:18,148 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:54:18,168 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:54:18,207 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:55:47,349 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:55:47,365 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:55:47,402 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:56:14,212 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:56:14,250 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:56:14,314 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:57:47,736 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:57:47,754 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:57:47,792 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 10:58:18,988 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 10:58:19,005 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 10:58:19,038 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:01:24,321 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:01:24,338 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:01:24,373 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:01:54,544 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:01:54,572 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:01:54,601 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:04:46,107 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:04:46,157 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:04:46,188 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:08:23,467 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:08:23,499 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:08:23,532 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:10:39,156 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:10:39,179 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:10:39,213 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:11:23,491 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:11:23,513 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:11:23,547 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:12:37,034 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:12:37,056 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:12:37,089 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:17:44,308 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:17:44,328 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:17:44,382 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:19:16,033 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:19:16,051 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:19:16,082 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:19:35,010 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:19:35,031 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:19:35,070 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:19:57,117 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:19:57,133 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:19:57,164 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:20:48,420 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:20:48,441 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:20:48,474 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:21:13,904 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:21:13,919 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:21:13,949 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:31:29,269 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:31:29,302 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:31:29,345 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:32:43,086 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:32:43,102 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:32:43,132 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:43:04,513 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:43:04,531 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:43:04,572 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:44:09,394 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:44:09,419 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:44:09,451 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:46:39,302 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:46:39,318 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:46:39,347 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:47:08,169 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:47:08,190 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:47:08,228 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:47:18,825 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:47:18,842 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:47:18,877 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:49:58,978 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:49:59,000 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:49:59,035 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:50:23,175 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:50:23,197 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:50:23,228 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:51:28,893 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:51:28,908 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:51:28,938 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:53:14,781 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:53:14,797 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:53:14,833 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:54:03,691 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:54:03,708 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:54:03,738 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:54:27,095 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:54:27,122 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:54:27,150 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:55:06,118 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:55:06,142 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:55:06,175 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:56:18,097 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:56:18,112 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:56:18,144 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 11:56:24,538 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 11:56:24,554 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 11:56:24,581 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:08:58,476 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:08:58,495 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:08:58,527 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:10:30,854 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:10:30,875 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:10:30,913 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:10:57,599 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:10:57,618 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:10:57,652 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:13:14,701 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:13:14,716 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:13:14,744 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:14:10,925 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:14:10,952 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:14:10,983 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:14:14,238 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:14:14,284 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:14:14,328 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:14:45,783 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:14:45,805 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:14:45,850 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:15:11,392 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:15:11,457 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:15:11,499 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:16:09,575 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:16:09,591 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:16:09,626 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:16:23,763 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:16:23,787 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:16:23,834 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:17:32,972 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:17:32,992 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:17:33,028 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:18:53,470 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:18:53,487 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:18:53,518 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:19:07,567 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:19:07,583 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:19:07,612 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:19:39,311 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:19:39,331 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:19:39,369 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:19:54,919 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:19:54,935 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:19:54,960 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:20:23,878 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:20:23,898 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:20:23,930 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:20:45,004 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:20:45,022 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:20:45,051 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:21:21,986 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:21:22,002 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:21:22,040 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources
+2023-04-05 12:22:48,044 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-05 12:22:48,060 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 66 resources
+2023-04-05 12:22:48,093 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\User\Desktop\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\test\resources

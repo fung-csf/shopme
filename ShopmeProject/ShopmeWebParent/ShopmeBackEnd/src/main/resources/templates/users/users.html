@@ -18,7 +18,7 @@
 			
 			
 		<!-- search form -->	
-		<div th:replace="~{fragments :: search_form_and_message('/users/page/1')}"></div>
+		<div th:replace="~{fragments :: search_form_and_message}"></div>
 
 			<!-- css class to display this table in large screens only , refer to static/style.css for more info-->
 			<div class="full-details">
@@ -28,19 +28,19 @@
 							<!-- refer to templates/fragments.html for fragment code-->
 							
 							<th class="hideable-column">
-								<th th:replace="~{fragments :: column_link('/users', 'id', 'User ID', 'tag')}"/>
+								<th th:replace="~{fragments :: column_link('id', 'User ID', 'tag')}"/>
 							</th>
 							
 							<th>Photos</th>
 							
 							<th class="hideable-column">
-								<th th:replace="~{fragments :: column_link('/users', 'email', 'Email', 'tag')}"/>
+								<th th:replace="~{fragments :: column_link('email', 'Email', 'tag')}"/>
 							</th>
 							
-							<th th:replace="~{fragments :: column_link('/users', 'firstName', 'First Name', 'none')}"/>
-							<th th:replace="~{fragments :: column_link('/users', 'lastName', 'Last Name', 'none')}"/>
+							<th th:replace="~{fragments :: column_link('firstName', 'First Name', 'none')}"/>
+							<th th:replace="~{fragments :: column_link('lastName', 'Last Name', 'none')}"/>
 							<th>Roles</th>
-							<th th:replace="~{fragments :: column_link('/users', 'enabled', 'Enabled', 'none')}"/>
+							<th th:replace="~{fragments :: column_link('enabled', 'Enabled', 'none')}"/>
 							<th></th>
 						</tr>
 					</thead>
@@ -100,7 +100,7 @@
 			
 			
 			<!-- pagination -->			
-			<div th:replace="~{fragments :: pagination('/users', 'users' )}"></div>
+			<div th:replace="~{fragments :: pagination('users')}"></div>
 			
 			<!-- delete confirmation modal  -->
 			<div th:replace="~{modal_fragments :: confirm_modal}"></div>
