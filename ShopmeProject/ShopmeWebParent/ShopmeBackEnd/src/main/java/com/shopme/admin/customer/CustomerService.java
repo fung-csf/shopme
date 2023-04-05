@@ -33,21 +33,9 @@ public class CustomerService {
 	private PasswordEncoder passwordEncoder;
 
 	
-	public Page<Customer> listByPage(int pageNum, String sortField, String sortDir, String keyword) {
+	public void listByPage(int pageNum, PagingAndSortingHelper helper) {
 
-		Sort sort = Sort.by(sortField);
-
-		sort = sortDir.equals("asc") ? sort.ascending() : sort.descending();
-
-		// page number start with 0 for pageable, so need to minus 1.
-		Pageable pageable = PageRequest.of(pageNum - 1, CUSTOMERS_PER_PAGE, sort);
-
-		// keyword for filtering users
-		if (keyword != null) {
-			return customerRepo.findAll(keyword, pageable);
-		}
-
-		return customerRepo.findAll(pageable);
+		helper.listEntities(pageNum, CUSTOMERS_PER_PAGE, customerRepo);
 	}
 
 	public void updateCustomerEnabledStatus(Integer id, boolean enabled) {

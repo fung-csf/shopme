@@ -3,30 +3,41 @@ package com.shopme.admin.paging;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
-import com.shopme.admin.user.UserService;
-import com.shopme.common.entity.User;
 
 public class PagingAndSortingHelper {
 
 	private ModelAndViewContainer model;
-	private String moduleURL;
 	private String listName;
 	private String sortField;
 	private String sortDir;
 	private String keyword;
 
-	public PagingAndSortingHelper(ModelAndViewContainer model, String moduleURL, String listName, String sortField,
+	public PagingAndSortingHelper(ModelAndViewContainer model, String listName, String sortField,
 			String sortDir, String keyword) {
 		this.model = model;
-		this.moduleURL = moduleURL;
 		this.listName = listName;
 		this.sortField = sortField;
 		this.sortDir = sortDir;
 		this.keyword = keyword;
 	}
 
+	public String getSortField() {
+		return sortField;
+	}
+
+	public String getSortDir() {
+		return sortDir;
+	}
+
+	public String getKeyword() {
+		return keyword;
+	}
+	
 	public void updateModelAttributes(int pageNum, Page<?> page) {
 		List<?> listItems = page.getContent();
 		int pageSize = page.getSize();
@@ -43,19 +54,32 @@ public class PagingAndSortingHelper {
 		model.addAttribute("endCount", endCount);
 		model.addAttribute("totalItems", page.getTotalElements());
 		model.addAttribute(listName, listItems);
-		model.addAttribute("moduleURL", moduleURL);
+		
 	}
+	
+	public void listEntities(int pageNum, int pageSize, SearchRepository<?, Integer> repo) {
+		Sort sort = Sort.by(sortField);
 
-	public String getSortField() {
-		return sortField;
+		sort = sortDir.equals("asc") ? sort.ascending() : sort.descending();
+		
+		// page number start from zero
+		Pageable pageable = PageRequest.of(pageNum - 1, pageSize, sort);
+		Page<?> page = null;
+		
+		if(keyword != null) {
+			page = repo.findAll(keyword, pageable);
+		}
+		else {
+			page = repo.findAll(pageable);
+		}
+		
+		updateModelAttributes(pageNum, page);
 	}
-
-	public String getSortDir() {
-		return sortDir;
-	}
-
-	public String getKeyword() {
-		return keyword;
+	
+	public Pageable createPageable(int pageSize, int pageNum) {
+		Sort sort = Sort.by(sortField);
+		sort = sortDir.equals("asc") ? sort.ascending() : sort.descending(); 
+		return PageRequest.of(pageNum - 1, pageSize, sort);
 	}
 
 }

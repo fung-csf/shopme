@@ -2,7 +2,6 @@ package com.shopme.common.entity;
 
 import java.util.Date;
 
-import jakarta.annotation.Resource.AuthenticationType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -66,9 +65,9 @@ public class Customer {
 	private Country country;
 
 	
-//	@Enumerated(EnumType.STRING)
-//	@Column(name = "authentication_type", length = 10)
-//	private AuthenticationType authenticationType;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "authentication_type", length = 10)
+	private AuthenticationType authenticationType;
 //	
 //	@Column(name = "reset_password_token", length = 30)
 //	private String resetPasswordToken;
@@ -210,13 +209,13 @@ public class Customer {
 	public String getFullName() { return firstName + " " + lastName; }
 	
 
-//	public AuthenticationType getAuthenticationType() {
-//		return authenticationType;
-//	}
-//
-//	public void setAuthenticationType(AuthenticationType authenticationType) {
-//		this.authenticationType = authenticationType;
-//	}
+	public AuthenticationType getAuthenticationType() {
+		return authenticationType;
+	}
+
+	public void setAuthenticationType(AuthenticationType authenticationType) {
+		this.authenticationType = authenticationType;
+	}
 //
 //	public String getResetPasswordToken() {
 //		return resetPasswordToken;

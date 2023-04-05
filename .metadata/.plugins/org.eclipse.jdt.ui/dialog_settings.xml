@@ -185,4 +185,19 @@
 	</section>
 	<section name="RenameInformationPopup">
 	</section>
+	<section name="NewAnnotationWizardPage">
+		<item key="add_documented" value="false"/>
+		<section name="AddRetention">
+			<item key="enabled" value="true"/>
+			<list key="selectedEnums">
+				<item value="RUNTIME"/>
+			</list>
+		</section>
+		<section name="AddTarget">
+			<item key="enabled" value="true"/>
+			<list key="selectedEnums">
+				<item value="PARAMETER"/>
+			</list>
+		</section>
+	</section>
 </section>

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.shopme.common.entity.AuthenticationType;
 import com.shopme.common.entity.Country;
 import com.shopme.common.entity.Customer;
 import com.shopme.setting.CountryRepository;
@@ -38,7 +39,7 @@ public class CustomerService {
 		encodePassword(customer);
 		customer.setEnabled(false);
 		customer.setCreatedTime(new Date());
-//		customer.setAuthenticationType(AuthenticationType.DATABASE);
+		customer.setAuthenticationType(AuthenticationType.DATABASE);
 		
 		String randomCode = RandomString.make(64);;
 		customer.setVerificationCode(randomCode);
@@ -47,6 +48,10 @@ public class CustomerService {
 		
 	}
 
+	public Customer getCustomerByEmail(String email) {
+		return customerRepo.findByEmail(email);
+	}
+	
 	private void encodePassword(Customer customer) {
 		String encodedPassword = passwordEncoder.encode(customer.getPassword());
 		customer.setPassword(encodedPassword);
@@ -60,6 +65,12 @@ public class CustomerService {
 		} else {
 			customerRepo.enable(customer.getId());
 			return true;
+		}
+	}
+	
+	public void updateAuthenticationType(Customer customer, AuthenticationType type) {
+		if (!customer.getAuthenticationType().equals(type)) {
+			customerRepo.updateAuthenticationType(customer.getId(), type);
 		}
 	}
 	

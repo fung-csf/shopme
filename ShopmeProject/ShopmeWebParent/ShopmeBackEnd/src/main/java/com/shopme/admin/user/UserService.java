@@ -46,23 +46,7 @@ public class UserService {
 	
 	public void listByPage(int pageNum, PagingAndSortingHelper helper) {
 		
-		Sort sort = Sort.by(helper.getSortField());
-		
-		sort = helper.getSortDir().equals("asc") ? sort.ascending() : sort.descending();
-		
-		//page number start with 0 for pageable, so need to minus 1.
-		Pageable pageable = PageRequest.of(pageNum - 1, USERS_PER_PAGE, sort);
-		Page<User> page = null;
-		
-		//keyword for filtering users
-		if(helper.getKeyword() != null) {
-			page = userRepo.findAll(helper.getKeyword(), pageable);
-		}
-		else {
-			page = userRepo.findAll(pageable);
-		}
-		
-		helper.updateModelAttributes(pageNum, page);
+		helper.listEntities(pageNum, USERS_PER_PAGE, userRepo);
 	}
 	
 

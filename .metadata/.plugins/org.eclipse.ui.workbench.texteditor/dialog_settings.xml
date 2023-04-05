@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="search_form_and_message"/>
+		<item key="selection" value="oAuth2UserService"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="oAuth2UserService"/>
+			<item value="logoutForm"/>
+			<item value="th:replace"/>
+			<item value="loadUserByUsername"/>
 			<item value="isReadOnlyForSalesperson"/>
 			<item value="cancel"/>
 			<item value="search_form_and_message"/>
-			<item value="th:replace"/>
 			<item value="selectNewlyAddedState"/>
-			<item value="getfull"/>
-			<item value="mailTemplates"/>
-			<item value="register"/>
 		</list>
 		<list key="replacehistory">
 		</list>

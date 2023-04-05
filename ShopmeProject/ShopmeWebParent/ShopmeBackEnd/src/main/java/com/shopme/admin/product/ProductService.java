@@ -9,9 +9,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.init.RepositoriesPopulatedEvent;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import com.shopme.admin.paging.PagingAndSortingHelper;
 import com.shopme.common.entity.Brand;
 import com.shopme.common.entity.product.Product;
 import com.shopme.common.exception.ProductNotFoundException;
@@ -30,34 +32,33 @@ public class ProductService {
 		return (List<Product>) repo.findAll();
 	}
 
-	public Page<Product> listByPage(int pageNum, String sortField, String sortDir, String keyword, Integer categoryId) {
+	public void listByPage(int pageNum, PagingAndSortingHelper helper ,Integer categoryId) {
 
-		Sort sort = Sort.by(sortField);
-
-		sort = sortDir.equals("asc") ? sort.ascending() : sort.descending();
-
-		// page number start from zero
-		Pageable pageable = PageRequest.of(pageNum - 1, PRODUCTS_PER_PAGE, sort);
+		Pageable pageable = helper.createPageable(PRODUCTS_PER_PAGE, pageNum);
+		String keyword = helper.getKeyword();
+		Page<Product> page = null;
 
 		/* filter by keyword plus categoryId */
 		if (keyword != null && !keyword.isEmpty()) {
 			if (categoryId != null && categoryId > 0) {
 				String categoryIdMatch = "-" + String.valueOf(categoryId) + "-";
-				return repo.searchInCategory(categoryId, categoryIdMatch, keyword, pageable);
+				page = repo.searchInCategory(categoryId, categoryIdMatch, keyword, pageable);
 			}
-
-			return repo.findAll(keyword, pageable);
+			    page = repo.findAll(keyword, pageable);
+		} else {
+			/* filter by categoryId only */
+			if (categoryId != null && categoryId > 0) {
+				String categoryIdMatch = "-" + String.valueOf(categoryId) + "-";
+				page = repo.findAllInCategory(categoryId, categoryIdMatch, pageable);
+			} else {
+				page = repo.findAll(pageable);
+			}
 		}
 
-		/* filter by categoryId only */
-		if (categoryId != null && categoryId > 0) {
-			String categoryIdMatch = "-" + String.valueOf(categoryId) + "-";
-			return repo.findAllInCategory(categoryId, categoryIdMatch, pageable);
-		}
-
-		return repo.findAll(pageable);
+		helper.updateModelAttributes(pageNum, page);
 	}
 
+	
 	public Product save(@ModelAttribute("product") Product product) {
 		if (product.getId() == null) {
 			product.setCreatedTime(new Date());
